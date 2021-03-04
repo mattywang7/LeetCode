@@ -22,6 +22,8 @@ func main() {
 // 0ms
 // 2MB
 func letterCombinations(digits string) []string {
+	// In this case, have to use []string as value
+	// if string as value, cannot use curStr + ch to get a new string quickly
 	m := map[byte][]string{
 		'2': []string{"a", "b", "c"},
 		'3': []string{"d", "e", "f"},
