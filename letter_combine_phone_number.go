@@ -39,7 +39,7 @@ func letterCombinations(digits string) []string {
 	if digits == "" {
 		return res
 	}
-	backtrack("", &res, 0, digits, m);
+	backtrack("", &res, 0, digits, m)
 	return res
 }
 
@@ -49,6 +49,6 @@ func backtrack(curStr string, res *[]string, index int, digits string, digitsMap
 		return
 	}
 	for _, ch := range digitsMap[digits[index]] {
-		backtrack(curStr + ch, res, index + 1, digits, digitsMap)
+		backtrack(curStr+ch, res, index+1, digits, digitsMap)
 	}
 }
